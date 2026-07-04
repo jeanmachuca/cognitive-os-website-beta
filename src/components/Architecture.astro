@@ -1,0 +1,53 @@
+---
+const bridges = [
+  { protocol: "Display (Framebuffer)", desc: "Direct framebuffer access for video" },
+  { protocol: "Audio (ALSA)", desc: "ALSA driver control for sound" },
+  { protocol: "Network (NetworkManager)", desc: "Connection management via D-Bus" },
+  { protocol: "GPIO (Linux GPIO)", desc: "Low-level pin control for peripherals" },
+  { protocol: "Serial (TTY/UART)", desc: "Serial port communication" },
+];
+---
+<section id="architecture" class="section-hidden py-28 md:py-36 border-t border-border">
+  <div class="max-w-6xl mx-auto px-6">
+    <span class="font-mono text-xs tracking-[0.3em] text-cyan/60 uppercase block mb-2">Architecture</span>
+    <h2 class="text-3xl md:text-5xl font-bold tracking-tight text-white mb-16">Two-tier AI brain on Alpine Linux.</h2>
+
+    <div class="grid md:grid-cols-2 gap-8">
+      <!-- Left: Layer stack -->
+      <div class="bg-black/60 border border-border rounded-xl p-6 font-mono text-sm">
+        <div class="flex items-center gap-2 mb-6 pb-4 border-b border-border">
+          <span class="w-2 h-2 rounded-full bg-green-500"></span>
+          <span class="text-neutral-400 text-xs">cognitiveos — layer stack</span>
+        </div>
+        <div class="space-y-0">
+          {["User", "Bubble Tea TUI", "cognitiveosd daemon", "Raw + Wide Models", "MCP Bridges", "Alpine Linux"].map((layer, i) => (
+            <div class="flex items-center gap-4 py-2.5 px-3 rounded hover:bg-white/[0.02] transition-colors">
+              <span class="text-neutral-600 w-5 shrink-0 text-right">{6 - i}</span>
+              <span class={i === 0 ? 'text-cyan font-bold' : i === 5 ? 'text-green' : i === 1 ? 'text-yellow-400' : i === 2 ? 'text-blue-400' : i === 3 ? 'text-purple-400' : 'text-neutral-300'}>
+                {layer}
+              </span>
+            </div>
+          ))}
+        </div>
+      </div>
+
+      <!-- Right: MCP Bridges -->
+      <div class="bg-muted/40 border border-border rounded-xl p-6">
+        <div class="flex items-center gap-2 mb-6 pb-4 border-b border-border">
+          <span class="font-mono text-neutral-400 text-xs uppercase tracking-wider">MCP Bridges</span>
+        </div>
+        <div class="space-y-4">
+          {bridges.map((b) => (
+            <div class="flex items-start gap-4 pb-4 border-b border-border/50 last:border-0 last:pb-0">
+              <div class="w-2 h-2 rounded-full bg-cyan mt-1.5 shrink-0"></div>
+              <div>
+                <p class="font-mono font-semibold text-sm text-white">{b.protocol}</p>
+                <p class="font-mono text-xs text-neutral-500 mt-0.5">{b.desc}</p>
+              </div>
+            </div>
+          ))}
+        </div>
+      </div>
+    </div>
+  </div>
+</section>

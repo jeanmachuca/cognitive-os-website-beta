@@ -1,0 +1,31 @@
+---
+const concepts = [
+  {
+    old: "Find app → Open → Learn UI → Permissions → Manage files",
+    new: "Ask AI",
+  },
+  {
+    old: "User accounts → Permissions model → Sandboxed apps",
+    new: "One user: the AI",
+  },
+  {
+    old: "Home screen → App grid → Window manager",
+    new: "Ephemeral UI",
+  },
+];
+---
+<section id="concept" class="section-hidden py-28 md:py-36">
+  <div class="max-w-6xl mx-auto px-6">
+    <span class="font-mono text-xs tracking-[0.3em] text-cyan/60 uppercase block mb-2">Concept</span>
+    <h2 class="text-3xl md:text-5xl font-bold tracking-tight text-white mb-16 max-w-2xl">Computing re-imagined from first principles.</h2>
+
+    <div class="grid md:grid-cols-3 gap-6">
+      {concepts.map((c) => (
+        <div class="bg-muted/40 border border-border rounded-xl p-8 hover:border-cyan/20 transition-colors">
+          <p class="font-mono text-sm text-neutral-500 line-through mb-6 leading-relaxed">{c.old}</p>
+          <p class="font-mono text-lg font-bold text-cyan">→ {c.new}</p>
+        </div>
+      ))}
+    </div>
+  </div>
+</section>

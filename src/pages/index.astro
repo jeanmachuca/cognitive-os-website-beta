@@ -1,0 +1,37 @@
+---
+import Layout from '../layouts/Layout.astro';
+import Navbar from '../components/Navbar.astro';
+import Hero from '../components/Hero.astro';
+import Concept from '../components/Concept.astro';
+import Architecture from '../components/Architecture.astro';
+import Principles from '../components/Principles.astro';
+import Repositories from '../components/Repositories.astro';
+import CTA from '../components/CTA.astro';
+import Footer from '../components/Footer.astro';
+---
+
+<Layout title="CognitiveOS — AI-native operating system">
+  <Navbar />
+  <main>
+    <Hero />
+    <Concept />
+    <Architecture />
+    <Principles />
+    <Repositories />
+    <CTA />
+  </main>
+  <Footer />
+
+  <script>
+    const observer = new IntersectionObserver((entries) => {
+      entries.forEach((entry) => {
+        if (entry.isIntersecting) {
+          entry.target.classList.add('section-visible');
+          observer.unobserve(entry.target);
+        }
+      });
+    }, { threshold: 0.1 });
+
+    document.querySelectorAll('.section-hidden').forEach((el) => observer.observe(el));
+  </script>
+</Layout>

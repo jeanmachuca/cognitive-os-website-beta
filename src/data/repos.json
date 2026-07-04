@@ -1,0 +1,66 @@
+[
+  {
+    "name": "cognitiveos",
+    "status": "complete",
+    "lang": "Go",
+    "desc": "Core OS orchestrator & runtime environment",
+    "icon": "🧠",
+    "url": "https://github.com/CognitiveOS-Project/cognitiveos"
+  },
+  {
+    "name": "cpm",
+    "status": "in-dev",
+    "lang": "Rust",
+    "desc": "Cognitive Package Manager for system extensions",
+    "icon": "📦",
+    "url": "https://github.com/CognitiveOS-Project/cpm"
+  },
+  {
+    "name": "cognitiveosd",
+    "status": "complete",
+    "lang": "Go",
+    "desc": "Daemon bridging AI models to hardware",
+    "icon": "⚙️",
+    "url": "https://github.com/CognitiveOS-Project/cognitiveosd"
+  },
+  {
+    "name": "inference",
+    "status": "in-dev",
+    "lang": "Rust",
+    "desc": "Local LLM inference engine (llama.cpp bindings)",
+    "icon": "🧪",
+    "url": "https://github.com/CognitiveOS-Project/inference"
+  },
+  {
+    "name": "core-mcp-bridges",
+    "status": "complete",
+    "lang": "Go",
+    "desc": "Display/Audio/Net/GPIO/Serial MCP bridges",
+    "icon": "🌉",
+    "url": "https://github.com/CognitiveOS-Project/core-mcp-bridges"
+  },
+  {
+    "name": "cli",
+    "status": "in-dev",
+    "lang": "Go",
+    "desc": "Developer CLI for interacting with CognitiveOS",
+    "icon": "⌨️",
+    "url": "https://github.com/CognitiveOS-Project/cli"
+  },
+  {
+    "name": "registry-server",
+    "status": "in-dev",
+    "lang": "Go",
+    "desc": "Package & model registry API server",
+    "icon": "🗂️",
+    "url": "https://github.com/CognitiveOS-Project/registry-server"
+  },
+  {
+    "name": "product-specs",
+    "status": "complete",
+    "lang": "Markdown",
+    "desc": "Architecture & design specifications",
+    "icon": "📐",
+    "url": "https://github.com/CognitiveOS-Project/product-specs"
+  }
+]

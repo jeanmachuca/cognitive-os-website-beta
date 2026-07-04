@@ -1,0 +1,38 @@
+---
+import repos from '../data/repos.json';
+---
+<section id="repositories" class="section-hidden py-28 md:py-36 border-t border-border">
+  <div class="max-w-6xl mx-auto px-6">
+    <div class="flex items-end justify-between mb-16">
+      <div>
+        <span class="font-mono text-xs tracking-[0.3em] text-cyan/60 uppercase block mb-2">Repositories</span>
+        <h2 class="text-3xl md:text-5xl font-bold tracking-tight text-white">Modular. Open source. MIT.</h2>
+      </div>
+    </div>
+
+    <div class="grid sm:grid-cols-2 lg:grid-cols-4 gap-4">
+      {repos.map((r) => (
+        <a
+          href={r.url}
+          target="_blank"
+          rel="noopener noreferrer"
+          class="group bg-muted/30 border border-border rounded-xl p-5 hover:border-cyan/30 hover:bg-muted/60 transition-all"
+        >
+          <div class="flex items-start justify-between mb-3">
+            <span class="text-2xl">{r.icon}</span>
+            <span class={`font-mono text-[10px] uppercase tracking-wider px-2 py-0.5 rounded-full border ${
+              r.status === 'complete'
+                ? 'text-green border-green/30 bg-green/5'
+                : 'text-yellow-400 border-yellow-400/30 bg-yellow-400/5'
+            }`}>
+              {r.status === 'complete' ? 'Complete' : 'In Dev'}
+            </span>
+          </div>
+          <h3 class="font-mono font-bold text-sm text-white mb-1 group-hover:text-cyan transition-colors">{r.name}</h3>
+          <p class="text-xs text-neutral-500 leading-relaxed mb-3">{r.desc}</p>
+          <span class="font-mono text-[10px] text-neutral-600">{r.lang}</span>
+        </a>
+      ))}
+    </div>
+  </div>
+</section>

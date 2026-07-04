@@ -1,0 +1,27 @@
+[
+  {
+    "id": "01",
+    "title": "AI is the OS, not an app",
+    "desc": "The AI isn't installed on top of the OS — it is the OS. Every interaction routes through the cognitive core, not through discrete applications."
+  },
+  {
+    "id": "02",
+    "title": "One user: the AI",
+    "desc": "There are no human user accounts, no permissions dialogs, no sudo prompts. The AI manages all system resources on behalf of the human."
+  },
+  {
+    "id": "03",
+    "title": "Self-managing",
+    "desc": "Updates, drivers, dependencies, and configuration are handled autonomously. The AI allocates RAM, schedules processes, and resolves conflicts without human intervention."
+  },
+  {
+    "id": "04",
+    "title": "Ephemeral interface",
+    "desc": "UI is generated on-demand and discarded when no longer needed. No persistent windows, no home screen, no app grid — just intent and response."
+  },
+  {
+    "id": "05",
+    "title": "Universal substrate",
+    "desc": "Alpine Linux provides a minimal, secure foundation. The same OS image runs on servers, edge devices, and embedded hardware — the AI adapts to the form factor."
+  }
+]

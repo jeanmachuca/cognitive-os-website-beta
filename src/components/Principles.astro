@@ -1,0 +1,21 @@
+---
+import principles from '../data/principles.json';
+---
+<section id="principles" class="section-hidden py-28 md:py-36 border-t border-border">
+  <div class="max-w-6xl mx-auto px-6">
+    <span class="font-mono text-xs tracking-[0.3em] text-cyan/60 uppercase block mb-2">Principles</span>
+    <h2 class="text-3xl md:text-5xl font-bold tracking-tight text-white mb-16">Built on radical constraints.</h2>
+
+    <div class="space-y-6">
+      {principles.map((p) => (
+        <div class="flex items-start gap-6 border-l-2 border-cyan/40 pl-6 py-5 hover:border-cyan transition-colors group">
+          <span class="font-mono text-2xl font-bold text-neutral-600 group-hover:text-cyan transition-colors w-12 shrink-0">{p.id}</span>
+          <div>
+            <h3 class="text-xl font-bold text-white mb-1">{p.title}</h3>
+            <p class="text-neutral-400 leading-relaxed max-w-3xl">{p.desc}</p>
+          </div>
+        </div>
+      ))}
+    </div>
+  </div>
+</section>
